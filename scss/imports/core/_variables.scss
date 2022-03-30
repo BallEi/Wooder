@@ -1,7 +1,7 @@
 //======================================================BOXED LAYOUT=======================================================
 
 $container-max-width: 100%;
-$container-width: 1100px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
+$container-width: 1005px; // tùy thuộc vào container của bản thiết kế // $container-width = container (đo từ bản thiết kế) + 30px
 
 /*GRID - media queries breakpoints*/
 $xxs-min: 576px; // CÓ THỂ TÙY CHỈNH
@@ -22,6 +22,13 @@ $white-cl: #fff;
 $black-cl: #000;
 $red-cl: #d81f1f;
 $blue-cl: #00afab;
+
+$yellow-cl: #bea67c;
+$line-cl: #cfbe9f;
+$black-hd: #010101;
+$black-bd: #464646;
+$black-bg: #0e0e0e;
+
 
 $gradient-cl: linear-gradient(180deg, #df1cff 0%, #814bf6 50.55%, #00bcff 100%);
 
@@ -62,9 +69,15 @@ $cubic: cubic-bezier(0.84, 0.13, 0.33, 0.97);
     --gap: 30px; // gap này sử dụng cho gap cột & padding của container, container-fluid
 
     --height-header: 80px;
+    --height-res: 60px;
     --height-button: 56px;
+    --height-slider: 450px;
     --ptop: 150px;
-    --pd-section: 120px;
+    --pd-section: 95px;
+    // padding gallery, news
+    --pd-sec: 60px;
+    
+    --pd-res: 20px;
 
     @media (max-width: $sm-max) {
         // Tablet

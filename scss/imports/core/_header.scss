@@ -1,1 +1,148 @@
 // css header
+header {
+    height: var(--height-header);
+    width: 100%;
+    position: fixed;
+    @include fullscreen(true);
+    right: 0;
+    z-index: 300;
+    .container-fluid {
+        height: 100%;
+        // position: relative;
+        @include midflex;
+        .logo {
+            a {
+                display: flex;
+                align-items: center;
+            }
+            .hidden {
+                display: none;
+            }
+        }
+        .menu {
+            @include midflex;
+            @include translateX;
+            li {
+                height: 100%;
+                a {
+                    height: 100%;
+                    padding: 0 30px;
+                    @include text(15px, pb, 22.5px, 0.375px, $white-cl, uppercase);
+                    @include transition($t);
+                    overflow: hidden;
+                    &:hover {
+                        color: $yellow-cl;
+                        @include transition($t);
+                    }
+                }
+            }
+            
+        }
+        .right {
+            @include midflex;
+            .lang {
+                height: 100%;
+                @include midflex;
+                position: relative;
+                margin-right: 10px;
+                &__current {
+                    @include midflex;
+                    cursor: pointer;
+                    @include text(16px, pb, 22.5px, 0.8px, $white-cl, uppercase);
+                    i {
+                        @include midflex;
+                        margin-left: 8px;
+                         img {
+                            display: block;
+                            align-items: center;
+                        }
+                    }
+                }
+                &__option {
+                    display: none;
+                    width: 100px;
+                    height: auto;
+                    position: absolute;
+                    padding: 20px;
+                    background: $white-cl;
+                    top: 30px;
+                    right: 0px;
+                    text-align: right;
+                }
+            }
+            .btnmenu {
+                display: none;
+                height: 2px;
+                width: 16px;
+                background: $yellow-cl;
+                position: relative;
+                cursor: pointer;
+                &::before, &::after {
+                    @include afterbefore(100%, 2px, $yellow-cl);
+                    left: 0;
+                    top: 5px;
+                }
+                &::after {
+                    top: -5px;
+                }
+            }
+        }
+        // .nav {
+        //     width: 100vw;
+        //     height: 100vh;
+        //     position: fixed;
+        //     background: $black-bg;
+        //     top: 0;
+        //     left: 0;
+        //     @include transform(initial);
+        //     // z-index: 200;
+        //     opacity: 0;
+        //     ul {
+        //         flex-direction: column;
+        //         @include mid();
+        //         text-align: center;
+        //         li {
+        //             margin: 0 auto;
+        //             a {
+        //                 padding: 15px;
+        //                 color: $white-cl;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+    @include sm {
+        .container-fluid {
+            width: 100%;
+            .logo {
+                img {
+                    width: 100px;
+                    height: 12px;
+                }
+            }
+            .menu {
+                li {
+                    height: 100%;
+                    a {
+                        height: 100%;
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+    @include xs {
+        --height-header: 60px;
+        .container-fluid {
+            .menu {
+                display: none;
+            }
+            .right {
+                .btnmenu {
+                    display: block;
+                }
+            }
+            
+        }    
+    }
+}

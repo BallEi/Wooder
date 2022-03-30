@@ -16,9 +16,15 @@ body {
     width: 100%;
     max-width: $container-max-width;
     margin: auto;
-    @include text(var(--body16-fs), ir, var(--body16-lh), $black-cl, none); // tuỳ chỉnh
+    @include text(var(--body16-fs), pr, var(--body16-lh),0.4px, $black-bd, none); // tuỳ chỉnh
     background: $white-cl;
+    @include customscroll();
+    scroll-behavior: smooth;
     position: relative;
+    .mainwrapper {
+        width: 100%;
+        margin: auto;
+    }
     .container-fluid {
         width: 100%;
         padding-right: var(--gap);
@@ -75,6 +81,7 @@ body {
     }
     @include xs {
         // CSS responsive mobile
+        
     }
     @include xxs {
         // CSS responsive small mobile
