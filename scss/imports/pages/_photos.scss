@@ -1,0 +1,98 @@
+.listDrag {
+    padding: 0 0 90px 0;
+    @include xs {
+        padding: 0 0 60px 0;
+    }
+    .photos {
+        padding-bottom: 40px;
+        img {
+            height: 300px;
+            margin: 0 25px;
+            overflow: hidden;
+            object-fit: cover;
+            transition: transform 1s;
+            &:hover {
+                -ms-transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+        .flickity-page-dots {
+            display: none;
+        }
+        @include sm {
+            padding: 0 15px 20px 15px;
+        }
+    }
+    .line-slider {
+        height: 5px;
+        flex: 1;
+        background: #d8d8d8;
+        border-radius: 10px;
+        margin: 5px 15px;
+        position: relative;
+        overflow: hidden;
+        width: 100px;
+        margin: 0 auto;
+        .progress-bar {
+            width: 0;
+            background: $yellow9e-cl;
+            height: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+}
+
+//faq
+.faq {
+    .container {
+        .faq__header {
+            h2 {
+                font-size: $fz40-text;
+                line-height: 1;
+                color: #000;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: 2.8px;
+                margin-bottom: 25px;
+            }
+            .faq__text {
+                font-size: $fz-text;
+                color: rgb(0, 0, 0);
+                font-weight: 500;
+                letter-spacing: 0.4px;
+                margin-bottom: 45px;
+            }
+        }
+        .faq__button {
+            .accordion {
+                background-color: #eee;
+                color: #444;
+                padding: 20px;
+                width: 100%;
+                border: none;
+                cursor: pointer;
+                outline: none;
+                font-size: $fz-text;
+                transition: 0.5s;
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                &.active,
+                &:hover {
+                    background-color: #ccc;
+                }
+                span {
+                    font-size: $fz18-text;
+                }
+            }
+            .panel {
+                padding: 20px;
+                display: none;
+                background-color: $white-bg-cl;
+                overflow: hidden;
+            }
+        }
+    }
+}

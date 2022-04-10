@@ -701,6 +701,20 @@ article .video video {
   }
 }
 
+.heading {
+  font-family: ib;
+}
+
+.heading.--h1 {
+  font-size: var(--h1-fs);
+  line-height: var(--h1-lh);
+}
+
+.heading.--h2 {
+  font-size: var(--h2-fs);
+  line-height: var(--h2-lh);
+}
+
 .col-1,
 .col-2,
 .col-3,
@@ -2769,20 +2783,6 @@ article .video video {
   }
 }
 /* Navigation, header, footer*/
-.menu__top {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-height: 79px;
-  background: black;
-}
-
 /* Pages */
 .schero {
   height: 100vh;
